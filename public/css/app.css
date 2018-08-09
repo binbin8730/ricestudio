@@ -8355,3 +8355,10 @@ button.close {
   margin-bottom: 22px;
 }
 
+.register-page img.captcha,
+.login-page img.captcha {
+  margin-bottom: 0px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+

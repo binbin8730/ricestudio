@@ -63,4 +63,14 @@
 
 @section('script')
     <script src="{{ asset('plugins/flexslider/jquery.flexslider-min.js') }}"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $('#bg-slider').flexslider({
+            animation: "fade",
+            directionNav: false, //remove the default direction-nav - https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
+            controlNav: false, //remove the default control-nav
+            slideshowSpeed: 6000
+        });
+    });
+    </script>
 @stop
