@@ -23,12 +23,18 @@
             <!-- HEADER -->
             @include('layouts._header')
 
-            @yield('content')
+            @if( display_container() )
+                <div class="container independent">
+                    @include('layouts._message')
+                    @yield('content')
+                </div>
+            @else
+                @yield('content')
+            @endif
 
-            <!-- FOOTER -->
-            @include('layouts._footer')
         </div>
-
+        <!-- FOOTER -->
+        @include('layouts._footer')
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap-hover-dropdown.min.js') }}"></script>

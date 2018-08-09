@@ -8350,11 +8350,6 @@ button.close {
   }
 }
 
-.register-page .header,
-.login-page .header {
-  margin-bottom: 22px;
-}
-
 .register-page img.captcha,
 .login-page img.captcha {
   margin-bottom: 0px;
