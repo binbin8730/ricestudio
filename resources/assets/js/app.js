@@ -17,6 +17,15 @@ window.Vue = require('vue');
 
 Vue.component('example-component', require('./components/ExampleComponent.vue'));
 
-const app = new Vue({
-    el: '#app'
+// const app = new Vue({
+//     el: '#app'
+// });
+
+$(document).ready(function() {
+    $('#bg-slider').flexslider({
+        animation: "fade",
+        directionNav: false, //remove the default direction-nav - https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
+        controlNav: false, //remove the default control-nav
+        slideshowSpeed: 6000
+    });
 });
