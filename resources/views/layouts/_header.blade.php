@@ -1,7 +1,7 @@
 <header id="header" class="header">
     <div class="container">
         <h1 class="logo pull-left">
-            <a href="index.html">
+            <a href="{{ url('/') }}">
                 <span class="logo-title">水稻</span>
             </a>
         </h1><!--//logo-->
@@ -29,10 +29,37 @@
                         </ul>
                     </li><!--//dropdown-->
                     <li class="nav-item"><a href="contact.html">联系我们</a></li>
-                    <li class="nav-item"><button type="button" class="login-trigger btn btn-link" data-toggle="modal" data-target="#login-modal">登录</button></li>
-                    <li class="nav-item nav-item-cta last">
-                        <button type="button" class="btn btn-cta btn-cta-primary" data-toggle="modal" data-target="#signup-modal">注册</button>
-                    </li>
+                    @guest
+                        <li class="nav-item">
+                            <button type="button" class="login-trigger btn btn-link" data-toggle="modal" data-target="#login-modal"><a href="{{ route('login') }}">登录</a></button>
+                        </li>
+                        <li class="nav-item nav-item-cta last">
+                            <button type="button" class="btn btn-cta btn-cta-primary" data-toggle="modal" data-target="#signup-modal"><a href="{{ route('register') }}">注册</a></button>
+                        </li>
+                    @else
+                        <li class="nav-item dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <span class="user-avatar pull-left" style="margin-right:8px; margin-top:-5px;">
+                               <img src="https://fsdhubcdn.phphub.org/uploads/images/201709/20/1/PtDKbASVcz.png?imageView2/1/w/60/h/60" class="img-responsive img-circle" width="30px" height="30px">
+                            </span>
+                            {{ Auth::user()->name }} <span class="caret"></span>
+                            </a>
+
+                            <ul class="dropdown-menu" role="menu">
+                                <li>
+                                   <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                document.getElementById('logout-form').submit();">
+                                       退出登录
+                                   </a>
+
+                                   <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                       {{ csrf_field() }}
+                                   </form>
+                                </li>
+                            </ul>
+                        </li>
+                    @endguest
                 </ul><!--//nav-->
             </div><!--//navabr-collapse-->
         </nav><!--//main-nav-->

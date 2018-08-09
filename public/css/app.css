@@ -8350,3 +8350,8 @@ button.close {
   }
 }
 
+.register-page .header,
+.login-page .header {
+  margin-bottom: 22px;
+}
+

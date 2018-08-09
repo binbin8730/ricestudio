@@ -19,7 +19,7 @@
     </head>
     <body >
 
-        <div class="wrapper">
+        <div class="wrapper {{ route_class() }}-page">
             <!-- HEADER -->
             @include('layouts._header')
 
