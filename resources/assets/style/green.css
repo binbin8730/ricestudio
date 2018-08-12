@@ -497,13 +497,15 @@ select {
   text-transform: none;
   min-width: 180px;
 }
-.header .main-nav .nav .dropdown-menu a {
+
+.header .main-nav .nav .dropdown-menu a , .header .main-nav .nav .nav-item  .dropdown-menu a{
   border-bottom: 1px dotted #f5f5f5;
   padding: 8px 20px;
   color: #444;
   -webkit-opacity: 1;
   -moz-opacity: 1;
   opacity: 1;
+  font-weight: 400;
 }
 .header .main-nav .nav .dropdown-menu a:hover {
   background: #fff;

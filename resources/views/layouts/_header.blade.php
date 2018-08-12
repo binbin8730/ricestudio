@@ -19,7 +19,7 @@
                     <li class="nav-item {{ active_class(if_route('root')) }}"><a href="{{ url('/') }}">首页</a></li>
                     <li class="nav-item"><a href="tour.html">浏览</a></li>
                     <li class="nav-item"><a href="pricing.html">价格</a></li>
-                    <li class="nav-item  {{ active_class(if_route('categories.show')) }}  dropdown ">
+                    <li class="nav-item  {{ active_class( if_route('categories.show') || if_route('topics.index')) }}  dropdown ">
                         <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="{{ route('topics.index') }}">话题 <i class="fa fa-angle-down"></i></a>
                         <ul class="dropdown-menu">
                             <li><a href="{{ route('categories.show', 1) }}">分享</a></li>
