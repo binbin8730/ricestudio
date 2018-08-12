@@ -8352,17 +8352,21 @@ button.close {
 
 /* header */
 
-.nav .dropdown-menu {
+#main-nav .dropdown-menu {
   padding: 0px;
 }
 
-.nav .dropdown-menu li a {
+#main-nav .dropdown-menu li a {
   border-bottom: 1px solid #d8d8d8;
   line-height: 2.4;
 }
 
-.nav .dropdown-menu li a .glyphicon {
+#main-nav .dropdown-menu li a .glyphicon {
   margin-right: 8px;
+}
+
+#main-nav .nav-create {
+  margin-right: -10px;
 }
 
 .register-page img.captcha,
