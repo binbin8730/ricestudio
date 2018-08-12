@@ -14,7 +14,7 @@
 
         <link href="{{ asset('plugins/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
         <link href="{{ asset('css/green.css') }}" rel="stylesheet">
-        @yield('style')
+        @yield('styles')
 
     </head>
     <body >
@@ -38,6 +38,6 @@
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap-hover-dropdown.min.js') }}"></script>
-        @yield('script')
+        @yield('scripts')
     </body>
 </html>

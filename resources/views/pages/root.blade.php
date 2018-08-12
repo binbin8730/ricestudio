@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title' , '首页')
 
-@section('style')
+@section('styles')
     <link href="{{ asset('plugins/flexslider/flexslider.css') }}" rel="stylesheet">
 @stop
 
@@ -61,7 +61,7 @@
 <!--//promo-->
 @stop
 
-@section('script')
+@section('scripts')
     <script src="{{ asset('plugins/flexslider/jquery.flexslider-min.js') }}"></script>
     <script type="text/javascript">
     $(document).ready(function() {
