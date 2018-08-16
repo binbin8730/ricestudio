@@ -35,6 +35,12 @@
         </div>
         <!-- FOOTER -->
         @include('layouts._footer')
+
+
+        @if (app()->isLocal())
+            @include('sudosu::user-selector')
+        @endif
+
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}"></script>
         <script src="{{ asset('plugins/bootstrap-hover-dropdown.min.js') }}"></script>
