@@ -8,8 +8,11 @@
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>@yield('title', 'Rice Studio') - 水稻工作室</title>
-        <meta name="description" content="@yield('description', 'Rice Studio 水稻工作室')" />
+        <title>@yield('title', 'Rice Studio') - {{ setting('site_name', '水稻 - Powered by RiceStudio') }}</title>
+        <meta name="keyword" content="@yield('keyword', setting('seo_keyword', '水稻工作室,北京网站建设'))" />
+
+
+        <meta name="description" content="@yield('description',  setting('seo_description', '水稻 - Powered by RiceStudio'))" />
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
         <link href="{{ asset('plugins/font-awesome/css/font-awesome.css') }}" rel="stylesheet">
